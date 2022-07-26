@@ -4,7 +4,7 @@ import { galleryItems } from './gallery-items.js';
 
 import SimpleLightbox from 'simplelightbox';
 // Дополнительный импорт стилей
-import 'simplelightbox/dist/simple-lightbox.css';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const ulEl = document.querySelector('.gallery');
 const previewLinks = galleryItems.reduce(
