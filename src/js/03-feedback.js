@@ -24,6 +24,9 @@ function onFormInput(event) {
 
 function onFormSubmit(event) {
   event.preventDefault();
+  if (textAreaRef.value == '' || inputRef.value == '') {
+    alert('Please fill in all fields');
+  }
   event.target.reset();
   localStorage.removeItem(STORAGE_KEY);
 }
