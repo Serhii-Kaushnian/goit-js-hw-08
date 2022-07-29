@@ -18,8 +18,6 @@ function onFormInput(event) {
   formData[event.target.name] = event.target.value;
 
   localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
-
-  console.log('formData: ', formData);
 }
 
 function onFormSubmit(event) {
@@ -27,6 +25,7 @@ function onFormSubmit(event) {
   if (textAreaRef.value == '' || inputRef.value == '') {
     alert('Please fill in all fields');
   }
+  console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
   event.target.reset();
   localStorage.removeItem(STORAGE_KEY);
 }
@@ -46,5 +45,4 @@ function restoreMessage() {
       inputRef.value = email;
     }
   }
-  console.log('parsedMessage: ', parsedMessage);
 }
